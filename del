@@ -1,0 +1,5 @@
+#!/bin/bash
+#Program:
+rm -rf IBZKPT CHG* DOSCAR EIGENVAL OSZICAR OUTCAR PCDAT XDATCAR WAVECAR err vasprun.xml *log
+rm -rf log* *log
+rm -rf *.e*  *.o*  
