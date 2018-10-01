@@ -4,9 +4,12 @@
 # To use it: postcar.sh Fe B O H
 
 # Define local potpaw_GGA pseduopotential repository:
-#repo="/home/lineng/vasp/user/libing/VASP/potpaw_PBE1"
-repo="/public1/home/lineng/vasp/user/libing/PBE/potpaw_PBE1"
 
+#repo="/home/lineng/vasp/user/libing/VASP/potpaw_PBE1"
+
+# 查找脚本的目录
+repo=${LB_HOME}"/PBE"
+# echo $repo
 
 # Check if older version of POTCAR is present
 if [ -f POTCAR ] ; then
