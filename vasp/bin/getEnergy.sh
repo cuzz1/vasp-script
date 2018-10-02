@@ -11,6 +11,9 @@ do
 
   	if [ -d $dir ]; then
      	cd $dir
+		if [ ! -f OUTCAR ]; then
+			exit
+		fi
 		flag=`grep reached OUTCAR | tail -n 1 | awk '{print $1 " " $2 " " $3}'`
 		#flag=`grep reached OUTCAR | tail -n 1 `
      	E=`cat OUTCAR | grep "energy  without entropy=" | tail -n 1 | awk '{print $4}'` 

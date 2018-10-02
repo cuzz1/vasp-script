@@ -5,7 +5,8 @@
 # Defing need files
 files=(INCAR POTCAR KPOINTS CONTCAR vasp.pbs)
 # data range
-dirs=(0.95 0.96 0.97 0.98 0.99 1.00 1.01 1.02 1.03 1.04 1.05)
+#dirs=(0.95 0.96 0.97 0.98 0.99 1.00 1.01 1.02 1.03 1.04 1.05)
+dirs=(0.980 0.985 0.990 0.995 1.000 1.005 1.010 1.015 1.020 1.025)
 
 for file in ${files[*]}
 do
@@ -34,8 +35,9 @@ Direct    \033[32m[4] 固定坐标:10,25s/$/ F F F/g\033[0m
   0.8750000200000017 -0.0000000000000000  0.5878700937855866 F F F
   0.6249999799999983 -0.0000000000000000  0.4121299062144134 F F F
 "
-exit
+	exit
 fi
+
 
 
 # Do you want to run?
@@ -45,6 +47,14 @@ read flag
 if [ ${flag} = "n" -o ${flag} = "N" ]; then
 	exit
 fi
+
+bakdir=`date +%Y%m%d%H%M%S`
+mkdir $bakdir
+
+mv 1.* $bakdir
+mv 0.* $bakdir
+
+echo "### Moveing 1.* and 0.* to $bakdir directory"
 
 x11=`cat CONTCAR| sed -n '3p' | awk '{print $1}'`
 x22=`cat CONTCAR| sed -n '4p' | awk '{print $2}'`
@@ -57,12 +67,8 @@ do
 	a22=`echo "scale=10;${dir}*${x22}" | bc`
 	a33=`echo "scale=10;${dir}*${x33}" | bc`
 
-	if [ -d ${dir} ]; then
-		rm -rf ${dir}
-		echo "### Deleting ${dir}"
-	fi
-
 	mkdir ${dir}
+	echo "### Creating ${dir} directory."
 	cp ${files[*]} ${dir}
 	cd ${dir}
 	cat > POSCAR << EOF
@@ -72,7 +78,7 @@ EOF
 	sed -i "s/a22/${a22}/g" POSCAR
 	sed -i "s/a33/${a33}/g" POSCAR
 	
-	#qsub vasp.pbs
+	qsub vasp.pbs
 	cd ..
 done
 
