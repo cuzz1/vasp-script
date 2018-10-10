@@ -1,0 +1,26 @@
+#!/bin/bash -l
+#
+# Job: runmlg2.g09
+#
+#PBS -m n
+#PBS -l nodes=1:ppn=20
+#PBS -l walltime=1696:00:00
+#PBS -l mem=120000mb
+#PBS -e $PBS_JOBID.e
+#PBS -o $PBS_JOBID.o
+#PBS -q batch
+#
+
+PATH=$PATH:.:/opt/soft/vasp5.3.5
+export PATH
+
+source /opt/intel/composer_xe_2015/bin/compilervars.sh intel64
+source /opt/intel/mkl/bin/intel64/mklvars_intel64.sh
+source /opt/intel/impi/5.0.2.044/bin64/mpivars.sh
+
+
+cd $PBS_O_WORKDIR
+
+mpiexec.hydra -np 40 vasp
+
+
