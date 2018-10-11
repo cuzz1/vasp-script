@@ -24,13 +24,28 @@ if [ ! -d $folder ]; then
 	exit
 fi 
 
+
+# Do you want to run?
+echo -e -n "\033[31m### Are you sure to execute this shell [Y/N]: \033[0m"
+read flag
+
+if [ ${flag} = "n" -o ${flag} = "N" ]; then
+    exit
+fi
+
+
 files=$(ls $folder)
 for file in $files
 do
+	if [ -d $file ]; then
+		rm -rf $file
+		echo "### Deleted $file folder."
+	fi
 	mkdir $file
 	echo "### Creating $file folder."
 	cp $folder/$file  $file/
-	cd $file && mv $file POSCAR && cd ..
 	cp ${list[*]} $file/
+	cd $file && mv $file POSCAR 
+	qsub lb.vasp
+	cd ..
 done
-
