@@ -6,7 +6,7 @@
 # and other files(list)
 
 
-folder=postar
+folder=poscar
 list=(INCAR POTCAR KPOINTS lb.pbs)
 
 for item  in ${list[*]}
@@ -46,6 +46,6 @@ do
 	cp $folder/$file  $file/
 	cp ${list[*]} $file/
 	cd $file && mv $file POSCAR 
-	qsub lb.pbs
+	# qsub lb.pbs
 	cd ..
 done
