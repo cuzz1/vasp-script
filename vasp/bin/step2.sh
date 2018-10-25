@@ -8,8 +8,11 @@ files=(INCAR POTCAR KPOINTS CONTCAR lb.pbs)
 dirs=(0.95 0.96 0.97 0.98 0.99 1.00 1.01 1.02 1.03 1.04 1.05)
 #dirs=(0.980 0.985 0.990 0.995 1.000 1.005 1.010 1.015 1.020 1.025)
 
+echo "You shoud in step2 folder."
+
 for file in ${files[*]}
 do
+	cp ../step1/$file .
 	if [ ! -f $file ]; then
 		echo -e "\033[31m### Warnning $file NOT FOUND \033[0m"
 		exit

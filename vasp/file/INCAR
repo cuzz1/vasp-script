@@ -25,8 +25,8 @@ POTIM = 0.2 # 移动的步长
 #NFREE = 2
 
 # spin
-ISPIN = 2
-MAGMOM = 8*0 8*3 8*0 1*0 
+#ISPIN = 2
+#MAGMOM = 8*0 8*3 8*0 1*0 
 
 # + U
 #LDAU = .TRUE.
