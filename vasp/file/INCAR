@@ -14,15 +14,15 @@ PREC = Accurate  # 精确度
 ALGO = Fast      # 电子优化算法
 
 
-NSW = 200   # 总步数 
-IBRION = 2  # 原子如何移动
-POTIM = 0.2 # 移动的步长
+#NSW = 200   # 总步数 
+#IBRION = 2  # 原子如何移动
+#POTIM = 0.2 # 移动的步长
 
 # frequence
-#NSW = 1
-#IBRION = 5
-#POTIM = 0.2
-#NFREE = 2
+NSW = 1
+IBRION = 5
+POTIM = 0.2
+NFREE = 2
 
 # spin
 #ISPIN = 2
