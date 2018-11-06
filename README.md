@@ -1,10 +1,4 @@
-# Shell
-
-## 学习笔记
-
-[Shell编程笔记](/notes/Shell.md)
-
-## VASP脚本
+# VASP脚本
 
 自己整理的一些vasp脚本
 
