@@ -8,8 +8,8 @@
 #repo="/home/lineng/vasp/user/libing/VASP/potpaw_PBE1"
 
 # 查找脚本的目录
-repo=${LB_HOME}"/PBE"
-# echo $repo
+repo=${LB_HOME}"/pbe"
+#echo $repo
 
 # Check if older version of POTCAR is present
 if [ -f POTCAR ] ; then
