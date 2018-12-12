@@ -14,19 +14,19 @@ PREC = Accurate  # 精确度
 ALGO = Fast      # 电子优化算法
 
 
-#NSW = 200   # 总步数 
-#IBRION = 2  # 原子如何移动
-#POTIM = 0.2 # 移动的步长
+NSW = 200        # 总步数 
+IBRION = 2       # 原子如何移动
+POTIM = 0.2      # 移动的步长
 
 # frequence
-NSW = 1
-IBRION = 5
-POTIM = 0.2
-NFREE = 2
+#NSW = 1
+#IBRION = 5
+#POTIM = 0.2
+#NFREE = 2
 
-# spin
-#ISPIN = 2
-#MAGMOM = 8*0 8*3 8*0 1*0 
+# spin Fe 3 Cr 1.5
+ISPIN = 2
+MAGMOM = 8*3 8*0 
 
 # + U
 #LDAU = .TRUE.
