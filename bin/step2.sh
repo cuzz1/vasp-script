@@ -44,10 +44,10 @@ fi
 
 
 # Do you want to run?
-echo -e -n "\033[31m### Are you sure to execute this shell [Y/N]: \033[0m"
+echo -e -n "\033[31m### Are you sure to execute this shell [y/n]: \033[0m"
 read flag
 
-if [ ${flag} = "n" -o ${flag} = "N" ]; then
+if [ ${flag} != "y" ]; then
 	exit
 fi
 

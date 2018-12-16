@@ -11,14 +11,24 @@
 repo=${LB_HOME}"/pbe"
 #echo $repo
 
-if [ ! -f POSCAR ]; then
-	echo "### WARING: POSCAR NOT FOUND."
-	exit
+if [ -f POSCAR ]; then
+	str=`sed -n '6,1p' POSCAR | tr '\r' ' ' | tr '\n' ' '`
 fi 
 
-str=`sed -n '6,1p' POSCAR | tr '\r' ' ' | tr '\n' ' '`
+if [ -d poscar ]; then
+	filelist=`ls poscar/`
+	for file in $filelist
+	do
+		str=`sed -n '6,1p' poscar/$file | tr '\r' ' ' | tr '\n' ' '`
+		break
+	done
+fi
 
-arr=($str)
+if (( $# == 0)); then
+	arr=($str)
+else
+	arr=$*
+fi
 
 # Check if older version of POTCAR is present
 if [ -f POTCAR ] ; then
