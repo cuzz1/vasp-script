@@ -2,7 +2,6 @@ SYSTEM = MBene
 ISTATRT = 0      # 是不是初始算
 ICHARG = 2       # 如何构造初始电荷密度,初始算默认为2
 ENCUT = 450      # 截断能 
-EDIFF = 1E-05    # 收敛标准
 ISMEAR = 0       # 什么体系，金属(1)、半导体(0)、绝缘体(0)...
 SIGMA = 0.05     # 范围
 
@@ -17,16 +16,18 @@ ALGO = Fast      # 电子优化算法
 NSW = 200        # 总步数 
 IBRION = 2       # 原子如何移动
 POTIM = 0.2      # 移动的步长
+EDIFF = 1E-05    # 收敛标准
 
 # frequence
 #NSW = 1
 #IBRION = 5
 #POTIM = 0.2
 #NFREE = 2
+#EDIFF = 1E-07    
 
 # spin Fe 3 Cr 1.5
-ISPIN = 2
-MAGMOM = 8*3 8*0 
+#ISPIN = 2
+#MAGMOM = 8*3 8*0 
 
 # + U
 #LDAU = .TRUE.

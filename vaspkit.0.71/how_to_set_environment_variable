@@ -1,0 +1,10 @@
+# cp how_to_set_environment_variable ~/.vaspkit and modify the ~/.vaspkit file based on your settings!    
+VASP5                    .TRUE.             # .TRUE. or .FALSE.; Set .FALSE. if you are using vasp.4.x 
+GGA_PATH                 '~/POTCAR/GGA'     #  Path of GGA potential. Don't forget the quotation mark (') 
+PBE_PATH                 '~/POTCAR/PBE'     #  Path of PBE potential. Don't forget the quotation mark (')
+LDA_PATH                 '~/POTCAR/LDA'     #  Path of LDA potential. Don't forget the quotation mark (')                    
+POTCAR_TYPE               PBE               #  PBE, GGA or LDA; Set PBE if you want to make PBE-POTCAR file   
+GW_POTCAR                .FALSE.            # .TRUE. or .FALSE.; For example, H_GW, O_GW will be chose when POTCAR_GW = .TRUE.  
+RECOMMENDED_POTCAR       .TRUE.             # .TRUE. or .FALSE.; The recommended PAW potential will be chose when RECOMMENDED_POTCAR = .TRUE.
+SET_FERMI_ENERGY_ZERO    .TRUE.             # .TRUE. or .FALSE.; The Fermi Energy will be set to zero eV when SET_FERMI_ENERGY_ZERO = .TRUE.    
+SET_INCAR_WRITE_MODE      OVERRIDE           #  OVERRIDE, APPEND, BACK-UP-OLD,BACK-UP-NEW;  "Customize INCAR File"  whether to override existing INCAR/appending existing INCAR/backup existing INCAR to INCAR.old && write into INCAR/write into INCAR.new

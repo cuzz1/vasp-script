@@ -1,0 +1,18 @@
+Global Parameters
+  ISTART =  1            (Read existing wavefunction; if there)
+  # ICHARG =  11         (Non-self-consistent: GGA/LDA band structures)
+  LREAL  = Auto          (Projection operators: automatic)
+  ENCUT  =  400          (Cut-off energy for plane wave basis set, in eV) 
+  PREC   =  Accurate     (Precision level)  
+  LWAVE  = .TRUE.        (Write WAVECAR or not)
+  LCHARG = .TRUE.        (Write CHGCAR or not) 
+  ADDGRID= .TRUE.        (Increase grid; helps GGA convergence) 
+ 
+Static Calculation
+  ISMEAR = 0            (tetrahedron method for DOS) 
+  SIGMA = 0.05
+  LORBIT =  11           (PAW radii for projected DOS)
+  NEDOS  =  2001         (DOSCAR points) 
+  NELM   =  60           (Max electronic SCF steps)
+  EDIFF  =  1E-08        (SCF energy convergence; in eV)
+ 

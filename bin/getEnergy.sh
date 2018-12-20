@@ -4,7 +4,7 @@ if [ -f energy.txt ]; then
 	rm energy.txt
 fi
 
-touch energy.txt
+#touch energy.txt
 
 for dir in $(ls)
 do 
@@ -17,7 +17,7 @@ do
      		E=`cat OUTCAR | grep "energy  without entropy=" | tail -n 1 | awk '{print $4}'` 
 			# echo ${flag1}
 			echo -e "${dir}\t ${E}\t ${flag}"
-			echo  ${dir} ${E} >> ../energy.txt
+			# echo  ${dir} ${E} >> ../energy.txt
 		fi
      	cd ..
   	fi

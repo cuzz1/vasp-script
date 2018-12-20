@@ -1,0 +1,11 @@
+Step 1: Prepare KPOINTS file with Line-mode for band structure calculation, and rename KPOINTS as KPATH.in;  
+
+Step 2: Prepare VPKIT.in file consisting of supercell size;  
+
+Step 3: Run vaspkit with task 551; 
+
+Step 4: Run vasp with setting "LWAVE = T" in INCAR file ; It is advised to increase the number of empty bands (NBANDS=... in INCAR file) by a factor of 1.2-2 beyond a VASP-proposed defaul value to get a resonable description of higher energy states.  
+
+Step 5: Re-run vaspkit with task 552 to effective band structure data.
+
+* Of course you can use the same procedure to calculate effective band strucutre at hybrid-DFT or Meta-GGA level

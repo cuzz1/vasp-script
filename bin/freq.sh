@@ -27,7 +27,7 @@ mv CONTCAR POSCAR.x
 
 echo "### 1. Frequency "
 echo "### 2. Seletivity"
-echo "### 2. Fix Atmo"
+echo "### 3. Fix Atmo"
 
 
 
