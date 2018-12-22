@@ -4,30 +4,29 @@ ICHARG = 2       # 如何构造初始电荷密度,初始算默认为2
 ENCUT = 450      # 截断能 
 ISMEAR = 0       # 什么体系，金属(1)、半导体(0)、绝缘体(0)...
 SIGMA = 0.05     # 范围
-
-
+EDIFFG = -1E-02  # 收敛力
 ISIF = 2         # 固定晶格
 LREAL = Auto     # 投影算法是
 GGA = PE         # 交换关联函数
 PREC = Accurate  # 精确度
 ALGO = Fast      # 电子优化算法
 
-
+# Self-consistency
 NSW = 200        # 总步数 
 IBRION = 2       # 原子如何移动
 POTIM = 0.2      # 移动的步长
 EDIFF = 1E-05    # 收敛标准
 
-# frequence
+# Frequence
 #NSW = 1
 #IBRION = 5
 #POTIM = 0.2
 #NFREE = 2
 #EDIFF = 1E-07    
 
-# spin Fe 3 Cr 1.5
-#ISPIN = 2
-#MAGMOM = 8*3 8*0 
+# Spin Fe 3 Cr 1.5
+ISPIN = 2
+MAGMOM = 12*0 12*3 12*0 2*0
 
 # + U
 #LDAU = .TRUE.

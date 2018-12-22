@@ -1,9 +1,0 @@
-kpoints for bandstructure M-K-Gamma
-50
-line
-reciprocal
-0.000  0.500  0.000
-0.333337  0.3333337  0.000
-
-0.333337  0.3333337  0.000
-0.000  0.000  0.000

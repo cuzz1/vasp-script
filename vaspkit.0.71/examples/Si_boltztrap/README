@@ -1,4 +1,0 @@
-Step 1) Perform static calculation for the system with primitive cell using VASP code (current version only supports the non-spin-polarized system), 
-Step 2) Run vaspkit and choose 92.
-
-# The Fermi level is set to zero and the unit of energy level is Ry in case.energy file.   

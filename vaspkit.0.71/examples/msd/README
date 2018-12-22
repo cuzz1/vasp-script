@@ -1,5 +1,0 @@
-step 1: Prepare the reference structure POSCAR.ref file;
-
-step 2: Check whether the XDATCAR exists;
-
-step 3: Run vaspkit with task 921.  

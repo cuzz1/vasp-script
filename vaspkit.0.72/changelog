@@ -1,0 +1,253 @@
+Version 0.72 (20 Dec. 2018)
+   * Band-structure unfolding at DFT, hybrid-DFT and Meta-GGA (except GW) levels now available (task 28). See several examples in vaspkit.0.72/examples/band_unfolding;
+   * Added support to perform hybrid-DFT band-structure calculations with uniform k-point sampling along different k-paths (task 25). This feature is also suit for DFT and Meta-GGA (except GW) approaches. 
+   * Added support to generate POTCAR file manually or automatically for VASP.4.x POSCAR (task 103 & 104);
+   * Added support to convert CHGCAR and LOCPOT files to XcrySDen format (task 316 & 426);
+   * Added support to interpolate NEB images linearly (task 505);
+   * Added support to perform imaginary frequency corrections (task 507);
+   * Added support to read the comment-lines start to '!' in the INCAR file;
+   * Added support to get projected density-of-states (task 112) and projected band-structure (tasks 212 and 253) of one or more atoms at once;
+   * Added support to get projected density-of-states (task 113) and projected band-structure (tasks 213 and 254) of each element at once;
+   * Added support to sum over projected density-of-states (task 114) and projected band-structure (tasks 214 and 255) for selected atoms;
+   * Added support to sum over projected density-of-states (task 115) for selected atoms and orbitals;
+   * Added the parameter MINI_INCAR in ~/.vaspkit file to control whether a simplified INCAR will be written; see vaspkit/how_to_set_environment_variable file for reference;
+   * Further reduced, optimized, integrated, and reformed the main menu;
+   * Opened user interface for advanced users (task 74). See how_to_set_environment_variable for details;
+   * Updated to spglib 1.11.2;
+   * Fixed a bug in extracting the projected band-structure data at hybrid-DFT level in vaspkit.0.7x;
+   * Fixed a bug in converting XDATCAR file to PDB format for Animation (task 405);
+   * Fixed a bug in extracting projected density-of-states and projected band-structure for f-orbitals;
+   * Fixed a bug in evaluating band gap value in spin-polarized calculations.
+   * Minor bug fixes and significant optimizations.
+
+Version 0.71 (20 Nov. 2018)
+   * Further reduced, optimized, integrated, and reformed the main menu;
+   * Further reduced, optimized, integrated, and reformed the main menu;
+   * Added support to format INCAR and POSCAR if generated under Windows OS and check whether elements in POSCAR are in accordance with those in POTCAR (task 109);
+   * Fix atoms (FFF) by Layers (task 402) and Heights (task 403) now available;       
+   * Convert XDATCAR to PDB format for Animation (task 405) now available;                   
+   * Convert NEB-Path to PDB format for Animation (task 504) now available. See an example in vaspkit.0.71/examples/neb_animation;                              
+   * Reformat POSCAR File in Specified Order of Elements (task 107) now available;
+   * Thermal corrections for Adsorbate (task 501) and Gas (task 502) now available;                 
+   * Added support to read two or more CHGCAR files in charge difference calculations at once (task 34);
+   * Added support to keep selective dynamics information when building supercell model or performing convertion between fraction and cartesian coordinates;
+   * Added support to find symmetry for gas molecules (task 609);
+   * Added citations file;
+   * Fixed a bug in finding the suggested K-Path for 2D oblique Bravais lattice thanks to iGo;
+   * Fixed a bug in generating BAND-REFORMATTED.dat file thanks to JC.Liu@THU
+   * Updated to spglib 1.11.1;
+   * Minor bug fixes and further optimisations suggested by G.Tang@BIU.
+
+Version 0.70 (06 Nov. 2018)
+   * Calculation of the suggested K-Path for all possible Bravais lattices (except triclinic crystal systems) now available (task 8)
+   * Calculation of Gibbs free energy including vibration contributions and zero point energy (ZPE) correction now available thanks to Nan XU (task 741);   
+   * Calculation of d-band center now available (task 742)
+   * Finding the standard primitive cell now available (task 602);   
+   * Generation of Gamma-Only KPOINTS file now available (task 7); 
+   * Added the KLABLE file inlcuding the lables of high symmetry points and the corresponding k-coordinates in band-structure plots; 
+   * Added the parameter SET_FERMI_ENERGY_ZERO in ~/.vaspkit file to control whether Fermi-energy is set to Zero eV; see vaspkit/how_to_set_environment_variable file for reference;
+   * Added the parameter SET_INCAR_WRITE_MODE in ~/.vaspkit file to control whether to override existing INCAR/appending existing INCAR; see vaspkit/how_to_set_environment_variable file for reference;
+   * Added one column including the total orbital contribution for individual atoms in the PDOS.*.dat (task 12);
+   * Added Contributors file including the full list of contributors;
+   * One Specific Band-Structure was abandoned (task 24);
+   * Updated to spglib 1.10.4;
+   * Updated the default parameters in the customized INCAR file suggested by G.Tang@BIU and JC.Liu@THU (task 1);
+   * Renamed KPATH.dat to KLINES.dat;
+   * Fixed a bug in finding the standard crystal-cell (task 603);
+   * Fixed a bug in reading projected band structure;
+   * Minor bug fixes and further optimisations.
+
+Version 0.64 (17 May. 2018)
+   * Bugfix in calculating Fermi-surface with spin-orbit coupling (task 26);
+
+Version 0.63 (11 May. 2018)
+   * Bugfix in reading ELASTIC.in file in Elastic-Constant Calculator (task 2); 
+
+Version 0.62.1 (05 Apr. 2018)
+   * Corrected some typos in vaspkit.0.62/examples/msd;
+   * Added Acknowledgement file;
+   * Renamed the file README -> how_to_install
+   * Renamed the file how_to_set_environment_variable -> how_to_set_potcar_path 
+
+Version 0.62 (01 Apr. 2018)
+   * Added support for mean squared displacement (MSD) calculations (task 721);
+   * Added support for real-space wavefunction plot (task 51). See an example in vaspkit.0.62/examples/wavefunction_plot;
+   * Added support for reading lm-decomposed PROCAR file for the systems including f valence eletrons;
+   * Added support for writting projected band structure for each element;
+   * Implemented an easy way to calculate effective-mass of carrier. See an example in vaspkit.0.62/examples/emc; 
+   * Renamed Structure Toolkits -> Poscar2other Toolkits (task 3);
+   * Renamed Symmetry Toolkits -> Structure Toolkits (task 6);
+   * Bugfix in VASP2BoltzTraP Interface (task 73); 
+   * Bugfix in optical absorption coefficient which misses a 2Pi factor.   
+
+Version 0.61 (06 Jan. 2018)
+   * Added support for pritting absolute valence and conduction band edges of 2D materials with respect to vacuum level in 2D-Materials Toolkits (task 927);   
+   * Added support for pritting vacuum level in Planar-Average Potential calculations (task 42);
+   * Minor bug fixes and further optimisations.
+
+Version 0.60 (01 Jan. 2018)
+   * Added support for writting Fermi-Surface; 
+   * Added support for customizing INCAR file; 
+   * Added support for 2D-Materials Toolkits (experimental, partial); 
+   * Added support for generating POTCAR and/or INCAR files (if no POSCAR/INCAR exist) when generating KPOINTS file; 
+   * Improved the usage experience in Hybrid-DFT Band-Structure; 
+   * Bugfix in Symmetry Toolkits; 
+   * Bugfix in reading SOC band gap;   
+   * Minor bug fixes and further optimisations.
+
+Version 0.52 (30 Jun. 2017)
+   * Bugfix in reading Spin Density; 
+   * Bugfix in reading projected band structure with SOC effect; 
+   * Added support for hybrid-DFT band-structure calculations;
+   * Added support for reading partial parameters from INCAR file;
+   * Merged PDOS and l-m Decomposed DOS functions;
+   * Added support for gfortran compiler with version >4.8;
+   * Minor bug fixes and further optimisations.
+
+Version 0.51 (10 Oct. 2016)
+   * Bugfix in POSCAR to lat.in file, might still exist bugs; 
+   * Added support for calculating Elastic Constants; 
+   * Added support for VASP to BoltzTraP interface; 
+   * Added support for reading band gap value; 
+   * Added support for writting PDOS for each element; 
+   * Minor bug fixes and further optimisations.
+
+Version 0.50 (28 Jan. 2016)
+   * Added support for Atom Positions with Random Displacements;  
+   * Added support for Band-Structure Path Generating (experimental, partial);   
+   * Added support for POSCAR to pwscf, elk and siesta codes;   
+   * Added support for 3D Band-Structure for Two-Dimensional Materialsi; 
+   * Added support for Eeffective-Mass Calculator (experimental);
+   * Added supoort for Reading One Specified Band;
+   * Minor bug fixes and further optimisations.
+
+Version 0.43 (03 Jun. 2015) 
+   * Bugfix in Charge Density Difference.
+
+Version 0.42 (21 Feb. 2015) 
+   * Rewritten and Bugfix in Extraction of Band Structure Data;
+   * Reformatted DOS data.
+
+Version 0.41 (17 Dec. 2014) 
+   * Bugfix in Extraction of Spin Density Data.
+
+Verion 0.40 (18 Nov. 2014) 
+   * Added support for runing vaspkit under Command-Line Mode;
+   * Added support for Structure Converting, such as POSCAR/CONTCAR to cif, xsf, atat
+     structral formats;
+   * Added support for Symmetry Toolkit; 
+   * Added support for generating more uniform K-Mesh scheme;
+   * Added support for getting PDOS of f-state; 	
+   * Minor bug fixes and optimisations.
+
+Version 0.31 (10 Oct. 2014) 
+   * Added crystals folder including several hundreds crsytal structures;     
+   * Bugfix in EOS; 
+   * Bugfix in Planar Average Charge Density. 
+
+   * Calculation of the suggested K-Path for all possible Bravais lattices (except triclinic crystal systems) now available (task 8)
+   * Calculation of Gibbs free energy including vibration contributions and zero point energy (ZPE) correction now available thanks to Nan XU (task 741);   
+   * Calculation of d-band center now available (task 742)
+   * Finding the standard primitive cell now available (task 602);   
+   * Generation of Gamma-Only KPOINTS file now available (task 7); 
+   * Added the KLABLE file inlcuding the lables of high symmetry points and the corresponding k-coordinates in band-structure plots; 
+   * Added the parameter SET_FERMI_ENERGY_ZERO in ~/.vaspkit file to control whether Fermi-energy is set to Zero eV; see vaspkit/how_to_set_environment_variable file for reference;
+   * Added the parameter SET_INCAR_WRITE_MODE in ~/.vaspkit file to control whether to override existing INCAR/appending existing INCAR; see vaspkit/how_to_set_environment_variable file for reference;
+   * Added one column including the total orbital contribution for individual atoms in the PDOS.*.dat (task 12);
+   * Added Contributors file including the full list of contributors;
+   * One Specific Band-Structure was abandoned (task 24);
+   * Updated to spglib 1.10.4;
+   * Updated the default parameters in the customized INCAR file suggested by G.Tang@BIU and JC.Liu@THU (task 1);
+   * Renamed KPATH.dat to KLINES.dat;
+   * Fixed a bug in finding the standard crystal-cell (task 603);
+   * Fixed a bug in reading projected band structure;
+   * Minor bug fixes and further optimisations.
+
+Version 0.64 (17 May. 2018)
+   * Bugfix in calculating Fermi-surface with spin-orbit coupling (task 26);
+
+Version 0.63 (11 May. 2018)
+   * Bugfix in reading ELASTIC.in file in Elastic-Constant Calculator (task 2); 
+
+Version 0.62.1 (05 Apr. 2018)
+   * Corrected some typos in vaspkit.0.62/examples/msd;
+   * Added Acknowledgement file;
+   * Renamed the file README -> how_to_install
+   * Renamed the file how_to_set_environment_variable -> how_to_set_potcar_path 
+
+Version 0.62 (01 Apr. 2018)
+   * Added support for mean squared displacement (MSD) calculations (task 721);
+   * Added support for real-space wavefunction plot (task 51). See an example in vaspkit.0.62/examples/wavefunction_plot;
+   * Added support for reading lm-decomposed PROCAR file for the systems including f valence eletrons;
+   * Added support for writting projected band structure for each element;
+   * Implemented an easy way to calculate effective-mass of carrier. See an example in vaspkit.0.62/examples/emc; 
+   * Renamed Structure Toolkits -> Poscar2other Toolkits (task 3);
+   * Renamed Symmetry Toolkits -> Structure Toolkits (task 6);
+   * Bugfix in VASP2BoltzTraP Interface (task 73); 
+   * Bugfix in optical absorption coefficient which misses a 2Pi factor.   
+
+Version 0.61 (06 Jan. 2018)
+   * Added support for pritting absolute valence and conduction band edges of 2D materials with respect to vacuum level in 2D-Materials Toolkits (task 927);   
+   * Added support for pritting vacuum level in Planar-Average Potential calculations (task 42);
+   * Minor bug fixes and further optimisations.
+
+Version 0.60 (01 Jan. 2018)
+   * Added support for writting Fermi-Surface; 
+   * Added support for customizing INCAR file; 
+   * Added support for 2D-Materials Toolkits (experimental, partial); 
+   * Added support for generating POTCAR and/or INCAR files (if no POSCAR/INCAR exist) when generating KPOINTS file; 
+   * Improved the usage experience in Hybrid-DFT Band-Structure; 
+   * Bugfix in Symmetry Toolkits; 
+   * Bugfix in reading SOC band gap;   
+   * Minor bug fixes and further optimisations.
+
+Version 0.52 (30 Jun. 2017)
+   * Bugfix in reading Spin Density; 
+   * Bugfix in reading projected band structure with SOC effect; 
+   * Added support for hybrid-DFT band-structure calculations;
+   * Added support for reading partial parameters from INCAR file;
+   * Merged PDOS and l-m Decomposed DOS functions;
+   * Added support for gfortran compiler with version >4.8;
+   * Minor bug fixes and further optimisations.
+
+Version 0.51 (10 Oct. 2016)
+   * Bugfix in POSCAR to lat.in file, might still exist bugs; 
+   * Added support for calculating Elastic Constants; 
+   * Added support for VASP to BoltzTraP interface; 
+   * Added support for reading band gap value; 
+   * Added support for writting PDOS for each element; 
+   * Minor bug fixes and further optimisations.
+
+Version 0.50 (28 Jan. 2016)
+   * Added support for Atom Positions with Random Displacements;  
+   * Added support for Band-Structure Path Generating (experimental, partial);   
+   * Added support for POSCAR to pwscf, elk and siesta codes;   
+   * Added support for 3D Band-Structure for Two-Dimensional Materialsi; 
+   * Added support for Eeffective-Mass Calculator (experimental);
+   * Added supoort for Reading One Specified Band;
+   * Minor bug fixes and further optimisations.
+
+Version 0.43 (03 Jun. 2015) 
+   * Bugfix in Charge Density Difference.
+
+Version 0.42 (21 Feb. 2015) 
+   * Rewritten and Bugfix in Extraction of Band Structure Data;
+   * Reformatted DOS data.
+
+Version 0.41 (17 Dec. 2014) 
+   * Bugfix in Extraction of Spin Density Data.
+
+Verion 0.40 (18 Nov. 2014) 
+   * Added support for runing vaspkit under Command-Line Mode;
+   * Added support for Structure Converting, such as POSCAR/CONTCAR to cif, xsf, atat
+     structral formats;
+   * Added support for Symmetry Toolkit; 
+   * Added support for generating more uniform K-Mesh scheme;
+   * Added support for getting PDOS of f-state; 	
+   * Minor bug fixes and optimisations.
+
+Version 0.31 (10 Oct. 2014) 
+   * Added crystals folder including several hundreds crsytal structures;     
+   * Bugfix in EOS; 
+   * Bugfix in Planar Average Charge Density. 
+
