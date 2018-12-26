@@ -15,7 +15,7 @@ ALGO = Fast      # 电子优化算法
 NSW = 200        # 总步数 
 IBRION = 2       # 原子如何移动
 POTIM = 0.2      # 移动的步长
-EDIFF = 1E-05    # 收敛标准
+EDIFF = 1E-04    # 收敛标准
 
 # Frequence
 #NSW = 1
