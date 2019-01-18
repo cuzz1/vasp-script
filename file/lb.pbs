@@ -2,7 +2,8 @@
 #
 # Job: runmlg2.g09
 #
-#PBS -m n
+#PBS -m e
+#PBS -M libing775544@163.com
 #PBS -l nodes=3:ppn=20
 #PBS -l walltime=1696:00:00
 #PBS -l mem=120000mb

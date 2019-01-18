@@ -12,10 +12,17 @@ PREC = Accurate  # 精确度
 ALGO = Fast      # 电子优化算法
 
 # Self-consistency
-NSW = 200        # 总步数 
-IBRION = 2       # 原子如何移动
-POTIM = 0.2      # 移动的步长
-EDIFF = 1E-05    # 收敛标准
+#NSW = 200        # 总步数 
+#IBRION = 2       # 原子如何移动
+#POTIM = 0.2      # 移动的步长
+#EDIFF = 1E-05    # 收敛标准
+
+# Bader
+NSW = 0         
+IBRION = 2       
+POTIM = 0.2      
+EDIFF = 1E-05    
+LAECHG =.TRUE.    
 
 # Frequence
 #NSW = 1
@@ -23,6 +30,7 @@ EDIFF = 1E-05    # 收敛标准
 #POTIM = 0.2
 #NFREE = 2
 #EDIFF = 1E-07    
+
 
 # Spin Fe 3 Cr 1.5
 #ISPIN = 2
