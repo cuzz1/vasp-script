@@ -61,6 +61,7 @@ mv 0.* $bakdir
 echo "### Moveing 1.* and 0.* to $bakdir directory"
 
 x11=`cat CONTCAR| sed -n '3p' | awk '{print $1}'`
+x12=`cat CONTCAR| sed -n '4p' | awk '{print $1}'`
 x22=`cat CONTCAR| sed -n '4p' | awk '{print $2}'`
 x33=`cat CONTCAR| sed -n '5p' | awk '{print $3}'`
 
@@ -68,6 +69,7 @@ for dir in ${dirs[*]}
 do
 
 	a11=`echo "scale=10;${dir}*${x11}" | bc`
+	a12=`echo "scale=10;${dir}*${x12}" | bc`
 	a22=`echo "scale=10;${dir}*${x22}" | bc`
 	a33=`echo "scale=10;${dir}*${x33}" | bc`
 
@@ -79,6 +81,7 @@ do
 `cat ../Poscar`
 EOF
 	sed -i "s/a11/${a11}/g" POSCAR
+	sed -i "s/a12/${a12}/g" POSCAR
 	sed -i "s/a22/${a22}/g" POSCAR
 	sed -i "s/a33/${a33}/g" POSCAR
 	
