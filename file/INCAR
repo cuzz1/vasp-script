@@ -10,6 +10,7 @@ LREAL = Auto     # 投影算法是
 GGA = PE         # 交换关联函数
 PREC = Accurate  # 精确度
 ALGO = Fast      # 电子优化算法
+IVDW = 11        # 弱相互作用修复
 
 # Self-consistency
 #NSW = 200        # 总步数 
@@ -17,12 +18,18 @@ ALGO = Fast      # 电子优化算法
 #POTIM = 0.2      # 移动的步长
 #EDIFF = 1E-05    # 收敛标准
 
-# Bader
+# chg
+LCHARG = T
+LAECHG = T
+NELM = 100
 NSW = 0         
-IBRION = 2       
-POTIM = 0.2      
-EDIFF = 1E-05    
-LAECHG =.TRUE.    
+
+# Bader
+#NSW = 0         
+#IBRION = 2       
+#POTIM = 0.2      
+#EDIFF = 1E-05    
+#LAECHG =.TRUE.    
 
 # Frequence
 #NSW = 1
