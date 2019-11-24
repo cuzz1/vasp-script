@@ -2,7 +2,7 @@
 
 # authors by cuzz
 
-list=(INCAR CONTCAR POTCAR KPOINTS lb.pbs)
+list=(INCAR CONTCAR POTCAR KPOINTS wy.pbs)
 folder=freq
 
 for item  in ${list[*]}
