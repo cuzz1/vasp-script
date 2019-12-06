@@ -51,4 +51,4 @@ plt.ylim((-15, 10)) # set y limits manually
 fig = plt.gcf()
 fig.set_size_inches(8,6)
 #plt.show()
-plt.savefig('band.png',dpi=1000)
+plt.savefig('band1.png',dpi=1000)

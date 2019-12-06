@@ -6,7 +6,8 @@
 files=(INCAR POTCAR KPOINTS CONTCAR lb.pbs)
 # data range
 #dirs=(0.95 0.96 0.97 0.98 0.99 1.00 1.01 1.02 1.03 1.04 1.05)
-dirs=(0.97 0.98 0.99 1.00 1.01 1.02 1.03)
+#dirs=(0.97 0.98 0.99 1.00 1.01 1.02 1.03)
+dirs=(1.03)
 #dirs=(0.980 0.985 0.990 0.995 1.000 1.005 1.010 1.015 1.020 1.025)
 
 echo "You shoud in step2 folder."
@@ -28,7 +29,7 @@ if [ ! -f Poscar ]; then
 Fe2B2
    1.00000000000000  \033[32m[2] 使用axx替换坐标\033[0m 
      a11   0.0000000000000000    0.0000000000000000
-     0.0000000000000000    a22  0.0000000000000000
+     a21    a22  0.0000000000000000
      0.0000000000000000    0.0000000000000000   a33
    Fe   B
      8     8
@@ -61,7 +62,7 @@ mv 0.* $bakdir
 echo "### Moveing 1.* and 0.* to $bakdir directory"
 
 x11=`cat CONTCAR| sed -n '3p' | awk '{print $1}'`
-x12=`cat CONTCAR| sed -n '4p' | awk '{print $1}'`
+x21=`cat CONTCAR| sed -n '4p' | awk '{print $1}'`
 x22=`cat CONTCAR| sed -n '4p' | awk '{print $2}'`
 x33=`cat CONTCAR| sed -n '5p' | awk '{print $3}'`
 
@@ -69,7 +70,7 @@ for dir in ${dirs[*]}
 do
 
 	a11=`echo "scale=10;${dir}*${x11}" | bc`
-	a12=`echo "scale=10;${dir}*${x12}" | bc`
+	a21=`echo "scale=10;${dir}*${x21}" | bc`
 	a22=`echo "scale=10;${dir}*${x22}" | bc`
 	a33=`echo "scale=10;${dir}*${x33}" | bc`
 
@@ -81,7 +82,7 @@ do
 `cat ../Poscar`
 EOF
 	sed -i "s/a11/${a11}/g" POSCAR
-	sed -i "s/a12/${a12}/g" POSCAR
+	sed -i "s/a21/${a21}/g" POSCAR
 	sed -i "s/a22/${a22}/g" POSCAR
 	sed -i "s/a33/${a33}/g" POSCAR
 	
