@@ -2,7 +2,7 @@
 
 # authors by cuzz
 
-list=(INCAR CONTCAR POTCAR KPOINTS wy.pbs)
+list=(INCAR CONTCAR POTCAR KPOINTS lb.pbs)
 folder=freq
 
 for item  in ${list[*]}
@@ -25,9 +25,9 @@ cd $folder
 mv INCAR INCAR.x
 mv CONTCAR POSCAR.x
 
-echo "### 1. Frequency "
-echo "### 2. Seletivity"
-echo "### 3. Fix Atmo"
+echo "### 1. INCAR.	 Frequency "
+echo "### 2. POSCAR. Seletivity"
+echo "### 3. POSCAR. Fix Atmo,  10,25s/$/ F F F/g"
 
 
 
