@@ -17,7 +17,10 @@
 # you can't use 'fix.sh H', because H is not at the end.
 
 
-fileName=CONTCAR
+fileName=POSCAR.x
+
+dos2unix $fileName
+
 
 str1=`sed -n "6p" $fileName`
 str2=`sed -n "7p" $fileName`

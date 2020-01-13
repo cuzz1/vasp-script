@@ -1,10 +1,11 @@
 SYSTEM = MBene
-ISTATRT = 0      # 是不是初始算
-ICHARG = 2       # 如何构造初始电荷密度
+ISTATRT = 1      # 是不是初始算,0,初始算，1，进一步计算
+ICHARG = 1       # 如何构造初始电荷密度,1读取，初始算默认为2
 ENCUT = 450      # 截断能 
 SIGMA = 0.05     # 范围
 EDIFFG = -1E-02  # 收敛力
 ISIF = 2         # 固定晶格
+ISPIN = 2        # 自旋极化
 LREAL = Auto     # 投影算法是
 GGA = PE         # 交换关联函数
 PREC = Accurate  # 精确度
@@ -12,17 +13,18 @@ ALGO = Fast      # 电子优化算法
 IVDW = 11        # 弱相互作用修复
 
 # Self-consistency
-#ISMEAR = 1       # 什么体系，金属(1)、半导体(0)、绝缘体(0)...
-#NSW = 200        # 总步数 
-#IBRION = 2       # 原子如何移动
-#POTIM = 0.2      # 移动的步长
-#EDIFF = 1E-05    # 收敛标准
+ISMEAR = 1       # 什么体系，金属(1)、半导体(0)、绝缘体(0)...
+NSW = 200        # 总步数 
+IBRION = 2       # 原子如何移动
+POTIM = 0.2      # 移动的步长
+EDIFF = 1E-05    # 收敛标准
 
 # dos
 #ISMEAR = -5       # 什么体系，金属(1)、半导体(0)、绝缘体(0) dos(-5)
 #IBRION = -1
 #NSW = 0
 #LORBIT = 11
+#NEDOS = 2000
 
 
 # chg
@@ -41,12 +43,12 @@ IVDW = 11        # 弱相互作用修复
 #LAECHG =.TRUE.    
 
 # Frequence
-ISMEAR = 1       # 什么体系，金属(1)、半导体(0)、绝缘体(0)...
-NSW = 1
-IBRION = 5
-POTIM = 0.2
-NFREE = 2
-EDIFF = 1E-07    
+#ISMEAR = 0       # 什么体系，金属(1)、半导体(0)、绝缘体(0)...
+#NSW = 1
+#IBRION = 5
+#POTIM = 0.2
+#NFREE = 2
+#EDIFF = 1E-07    
 
 
 # Spin Fe 3 Cr 1.5
